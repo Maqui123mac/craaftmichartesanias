@@ -1,0 +1,27 @@
+{% extends "michoacan/home.html" %} {% block titulo%}ELIMINAR {% endblock %}
+{% block imagen %} {% load static %} {% static 'inicio/imagenes/home.png' %}
+{%endblock %} {% block contenido%}
+
+
+<!-- Tabla de Alumnos -->
+
+<form method="POST">
+  {% csrf_token %}
+  <br><br><br>
+  <div class="container" align="center">
+      <h4>Eliminar Producto</h4>
+      <p>
+        <strong>¿Estas seguro que deseas Eliminar el producto seleccionado?.</strong>
+      </p>
+  
+  
+  <button type="submit" class="btn btn-danger">Si</button>
+  <a href="{% url 'Carrusel' %}" class="btn btn-primary text-red">Cancelar</a>
+  </div>
+  </form>
+  <br><br>
+<!-- /Tabla de alumnos -->
+
+<!-- /Encabezado-->
+
+{% endblock %}
